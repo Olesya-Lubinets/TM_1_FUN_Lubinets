@@ -1,21 +1,49 @@
 Filled container. 
 
-Container contains 4 elements.
+Container contains 11 elements.
 0: It is a cartoon 
-It's a puppet cartoon
-Title = title1
+It's a drawn cartoon
+Title: TITLE1
 
 1: It is a cartoon 
-It's a drawn cartoon
-Title = title2
+It's a plasticine cartoon
+Title: TITLE2
 
-2: It is a fiction movie 
-Director:  Иванов
-Title = title3
+2: It is a cartoon 
+It's a puppet cartoon
+Title: TITLE3
 
 3: It is a fiction movie 
+Director:  Иванов
+Title: TITLE4
+
+4: It is a fiction movie 
 Director:  Петров
-Title = title4
+Title: TITLE5
+
+5: It is a fiction movie 
+Director:  Сидоров
+Title: TITLE6
+
+6: It is a cartoon 
+It's a puppet cartoon
+Title: TITLE7
+
+7: It is a fiction movie 
+Director:  88888
+Title: 88888
+
+8: It is a cartoon 
+It's a drawn cartoon
+Title: TITLE8
+
+9: It is a cartoon 
+It's a plasticine cartoon
+Title: TITLE9
+
+10: It is a documentary movie 
+Year:  2015
+Title: Название
 
 Empty container. 
 

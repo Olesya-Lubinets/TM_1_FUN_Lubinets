@@ -5,8 +5,10 @@ using namespace std;
 
 fiction* In_fiction( ifstream& ifst);
 cartoon* In_cartoon(ifstream& ifst);
+documentary* In_documentary(ifstream& ifst);
 void Out_fiction(fiction* t, ofstream& ofst);
 void Out_cartoon(cartoon* r, ofstream& ofst);
+void Out_documentary(documentary* r, ofstream& ofst);
 
 
     movie* In_movie(ifstream& ifst)
@@ -35,6 +37,15 @@ void Out_cartoon(cartoon* r, ofstream& ofst);
             return sp;
             break;
         }
+        case 3:
+        {
+            sp = new movie;
+            sp->k = movie::key::DOCUMENTARY;
+            sp->documentary = *(In_documentary(ifst));
+            sp->title = title;
+            return sp;
+            break;
+        }
         default:
             return 0;
         }
@@ -51,8 +62,11 @@ void Out_cartoon(cartoon* r, ofstream& ofst);
         case movie::key::FICTION:
             Out_fiction(&(obj.fiction), fout);
             break;
+        case movie::key::DOCUMENTARY:
+            Out_documentary(&(obj.documentary), fout);
+            break;
         default: 
             return;
         }
-        fout << "Title = " << obj.title << endl;
+        fout << "Title: " << obj.title << endl;
     }
