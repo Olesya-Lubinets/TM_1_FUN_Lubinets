@@ -3,19 +3,23 @@ Filled container.
 Container contains 4 elements.
 0: It is a cartoon 
 It's a puppet cartoon
-Title = title1
+Title = aa
+Number of vowels: 2
 
 1: It is a cartoon 
 It's a drawn cartoon
-Title = title2
+Title = aba
+Number of vowels: 2
 
 2: It is a fiction movie 
 Director:  Иванов
-Title = title3
+Title = aec
+Number of vowels: 2
 
 3: It is a fiction movie 
 Director:  Петров
-Title = title4
+Title = bbb
+Number of vowels: 0
 
 Empty container. 
 

@@ -4,6 +4,7 @@
 
 movie* In_movie(ifstream& ifst);
 void Out_movie(movie& obj, ofstream& fout);
+int Count(movie& obj);
     
     void Init(container &c) { c.len = 0; }
  
@@ -40,6 +41,7 @@ void Out_movie(movie& obj, ofstream& fout);
             {
                 ofst << i << ": ";
                 Out_movie(*(c.cont[i]), ofst);
+                ofst << "Number of vowels: " << Count(*(c.cont[i]))<<endl;
                 ofst << endl;
             }
         }

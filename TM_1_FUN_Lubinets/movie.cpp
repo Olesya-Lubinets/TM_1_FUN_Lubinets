@@ -56,3 +56,19 @@ void Out_cartoon(cartoon* r, ofstream& ofst);
         }
         fout << "Title = " << obj.title << endl;
     }
+
+ int Count( movie& obj)
+ {
+     int count = 0;
+     string vowels = "óå¸ýîàûÿþèeyuoai";
+     for (int i = 0; i < obj.title.length(); i++)
+     {
+         for (int k = 0; k < vowels.length(); k++)
+             if ((char)tolower(obj.title[i]) == vowels[k])
+             {
+                 count++;
+                 break;
+             }
+     }
+     return count;
+ }
