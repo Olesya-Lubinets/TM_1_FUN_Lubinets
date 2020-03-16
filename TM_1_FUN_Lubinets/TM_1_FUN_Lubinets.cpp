@@ -8,6 +8,7 @@ void Init(container& c);
 void Clear(container& c);
 void In(container& c, ifstream& ifst);
 void Out(container& c, ofstream& ofst);
+void Out_Cartoon(container& c, ofstream& ofst);
 
 
 
@@ -24,7 +25,8 @@ int main(int argc, char* argv[]) {
     Init(c);
     In(c, ifst);
     ofst << "Filled container. " << endl<<endl;
-    Out(c, ofst);
+   // Out(c, ofst);
+    Out_Cartoon(c, ofst);
    Clear(c);
     ofst << "Empty container. " << endl<<endl;
     Out(c, ofst);

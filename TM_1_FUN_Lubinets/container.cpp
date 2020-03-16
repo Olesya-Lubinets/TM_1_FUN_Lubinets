@@ -43,3 +43,14 @@ void Out_movie(movie& obj, ofstream& fout);
                 ofst << endl;
             }
         }
+
+   void Out_Cartoon(container& c, ofstream& ofst) {
+       ofst << "Only cartoons." << endl;
+       for (int i = 0; i < c.len; i++) {
+           ofst << i << ": ";
+           if (c.cont[i]->k == movie::CARTOON)
+               Out_movie(*(c.cont[i]), ofst);
+           else
+               ofst << endl;
+       }
+   }

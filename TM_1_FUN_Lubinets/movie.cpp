@@ -56,3 +56,4 @@ void Out_cartoon(cartoon* r, ofstream& ofst);
         }
         fout << "Title = " << obj.title << endl;
     }
+
