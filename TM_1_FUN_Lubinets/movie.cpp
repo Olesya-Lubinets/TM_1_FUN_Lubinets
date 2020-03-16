@@ -7,6 +7,7 @@ fiction* In_fiction( ifstream& ifst);
 cartoon* In_cartoon(ifstream& ifst);
 void Out_fiction(fiction* t, ofstream& ofst);
 void Out_cartoon(cartoon* r, ofstream& ofst);
+int Count(movie& obj);
 
 
     movie* In_movie(ifstream& ifst)
@@ -71,4 +72,7 @@ void Out_cartoon(cartoon* r, ofstream& ofst);
              }
      }
      return count;
+ }
+ bool Compare(movie* first, movie* second) {
+     return Count(*first) < Count(*second);
  }

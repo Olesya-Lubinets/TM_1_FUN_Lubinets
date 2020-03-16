@@ -5,6 +5,7 @@
 movie* In_movie(ifstream& ifst);
 void Out_movie(movie& obj, ofstream& fout);
 int Count(movie& obj);
+bool Compare(movie* first, movie* second);
     
     void Init(container &c) { c.len = 0; }
  
@@ -45,3 +46,15 @@ int Count(movie& obj);
                 ofst << endl;
             }
         }
+
+   void Sort(container& c) {
+       for (int i = 0; i < c.len - 1; i++) {
+           for (int j = i + 1; j < c.len; j++) {
+               if (Compare(c.cont[i], c.cont[j])) {
+                   movie* tmp = c.cont[i];
+                   c.cont[i] = c.cont[j];
+                   c.cont[j] = tmp;
+               }
+           }
+       }
+   }

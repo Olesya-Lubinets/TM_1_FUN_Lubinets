@@ -1,12 +1,12 @@
 4
 2
-aa
+a
 2
 2
-aba
+abae
 1
 1
-aec
+aecrtr
 Иванов
 1
 bbb
