@@ -16,6 +16,8 @@ void Out_cartoon(cartoon* r, ofstream& ofst);
         ifst >> m;
         string title;
         ifst >> title;
+        string country;
+        ifst >> country;
         switch (m) {
         case 1:
         {
@@ -23,6 +25,7 @@ void Out_cartoon(cartoon* r, ofstream& ofst);
             sp->k = movie::key::FICTION;
             sp->fiction = *(In_fiction( ifst));
             sp->title = title;
+            sp->country = country;
             return sp;
             break;
         }
@@ -32,6 +35,7 @@ void Out_cartoon(cartoon* r, ofstream& ofst);
             sp->k = movie::key::CARTOON;    
             sp->cartoon = *(In_cartoon(ifst));
             sp->title = title;
+            sp->country = country;
             return sp;
             break;
         }
@@ -55,4 +59,5 @@ void Out_cartoon(cartoon* r, ofstream& ofst);
             return;
         }
         fout << "Title = " << obj.title << endl;
+        fout << "Country of Origin: " << obj.country << endl;
     }

@@ -3,19 +3,23 @@ Filled container.
 Container contains 4 elements.
 0: It is a cartoon 
 It's a puppet cartoon
-Title = title1
+Title = aa
+Country of Origin: RUS
 
 1: It is a cartoon 
 It's a drawn cartoon
-Title = title2
+Title = aba
+Country of Origin: USA
 
 2: It is a fiction movie 
 Director:  Иванов
-Title = title3
+Title = aec
+Country of Origin: CAN
 
 3: It is a fiction movie 
 Director:  Петров
-Title = title4
+Title = bbb
+Country of Origin: UK
 
 Empty container. 
 
