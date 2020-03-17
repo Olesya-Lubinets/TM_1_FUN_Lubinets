@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
     ofst << "Filled container. " << endl<<endl;
    Out(c, ofst);
     
-    //Out_Cartoon(c, ofst);
+    Out_Cartoon(c, ofst);
    Clear(c);
     ofst << "Empty container. " << endl<<endl;
     Out(c, ofst);

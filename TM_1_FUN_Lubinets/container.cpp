@@ -51,13 +51,15 @@ bool Compare(movie* first, movie* second);
        ofst << "Only cartoons." << endl;
        for (int i = 0; i < c.len; i++) {
            ofst << i << ": ";
-           if (c.cont[i]->k == movie::CARTOON)
+           if (c.cont[i]->k == movie::CARTOON) {
                Out_movie(*(c.cont[i]), ofst);
+               ofst << "Number of vowels: " << Count(*(c.cont[i])) << endl;
+           }
            else
                ofst << endl;
        }
    }
-        }
+        
 
    void Sort(container& c) {
        for (int i = 0; i < c.len - 1; i++) {
