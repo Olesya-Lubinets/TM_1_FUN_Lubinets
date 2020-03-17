@@ -8,8 +8,6 @@ void Init(container& c);
 void Clear(container& c);
 void In(container& c, ifstream& ifst);
 void Out(container& c, ofstream& ofst);
-void Out_Cartoon(container& c, ofstream& ofst);
-void Sort(container& c);
 
 
 
