@@ -8,6 +8,7 @@ cartoon* In_cartoon(ifstream& ifst);
 documentary* In_documentary(ifstream& ifst);
 void Out_fiction(fiction* t, ofstream& ofst);
 void Out_cartoon(cartoon* r, ofstream& ofst);
+int Count(movie& obj);
 void Out_documentary(documentary* r, ofstream& ofst);
 
 
@@ -68,5 +69,24 @@ void Out_documentary(documentary* r, ofstream& ofst);
         default: 
             return;
         }
-        fout << "Title: " << obj.title << endl;
+        fout << "Title = " << obj.title << endl;
     }
+
+ int Count( movie& obj)
+ {
+     int count = 0;
+     string vowels = "óå¸ýîàûÿþèeyuoai";
+     for (int i = 0; i < obj.title.length(); i++)
+     {
+         for (int k = 0; k < vowels.length(); k++)
+             if ((char)tolower(obj.title[i]) == vowels[k])
+             {
+                 count++;
+                 break;
+             }
+     }
+     return count;
+ }
+ bool Compare(movie* first, movie* second) {
+     return Count(*first) < Count(*second);
+ }
