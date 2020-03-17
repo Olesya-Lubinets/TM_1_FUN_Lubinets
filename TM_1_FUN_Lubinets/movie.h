@@ -11,6 +11,7 @@ using namespace std;
    
 struct movie {
     string title;
+    string country;
     movie() { };
     ~movie() {};
     enum key { FICTION, CARTOON, DOCUMENTARY    } k;
