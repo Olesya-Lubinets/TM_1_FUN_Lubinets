@@ -48,6 +48,7 @@ void Out_documentary(documentary* r, ofstream& ofst);
             sp->k = movie::key::DOCUMENTARY;
             sp->documentary = *(In_documentary(ifst));
             sp->title = title;
+            sp->country = country;
             return sp;
             break;
         }
@@ -74,6 +75,8 @@ void Out_documentary(documentary* r, ofstream& ofst);
             return;
         }
         fout << "Title = " << obj.title << endl;
+        fout << "Country = " << obj.country << endl;
+        
     }
 
  int Count( movie& obj)
