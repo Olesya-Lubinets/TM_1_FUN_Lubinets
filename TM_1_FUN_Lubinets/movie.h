@@ -14,7 +14,7 @@ struct movie {
     string country;
     movie() { };
     ~movie() {};
-    enum key { FICTION, CARTOON, DOCUMENTARY    } k;
+    enum key { FICTION=1, CARTOON, DOCUMENTARY } k;
     union { 
         cartoon cartoon;
         fiction fiction;

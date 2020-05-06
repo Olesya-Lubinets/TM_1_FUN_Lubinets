@@ -18,6 +18,6 @@ documentary* In_documentary(ifstream& ifst)
 
 void Out_documentary(documentary* t, ofstream& ofst)
 {
-    ofst << "It is a documentary movie " << endl;
+    ofst << "It is a documentary movie" << endl;
     ofst << "Year:  " << t->year_release << endl;
 }

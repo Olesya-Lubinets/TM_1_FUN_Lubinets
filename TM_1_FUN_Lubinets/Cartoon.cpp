@@ -30,7 +30,7 @@ cartoon* In_cartoon( ifstream& ifst)
 
     void Out_cartoon(cartoon *r, ofstream& ofst)
     {
-        ofst << "It is a cartoon " << endl;
+        ofst << "It is a cartoon" << endl;
      
         switch (r->way)
         {

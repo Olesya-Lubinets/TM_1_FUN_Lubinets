@@ -74,8 +74,8 @@ void Out_documentary(documentary* r, ofstream& ofst);
         default: 
             return;
         }
-        fout << "Title = " << obj.title << endl;
-        fout << "Country = " << obj.country << endl;
+        fout << "Title: " << obj.title << endl;
+        fout << "Country: " << obj.country << endl;
         
     }
 

@@ -1,0 +1,19 @@
+Container contains 3 elements.
+0: It is a documentary movie
+Year:  2020
+Title: Title#ae
+Country: UK
+Number of vowels: 4
+
+1: It is a cartoon
+It's a puppet cartoon
+Title: Title#a
+Country: USA
+Number of vowels: 3
+
+2: It is a fiction movie
+Director:  Ivanov
+Title: Title#ab
+Country: RUS
+Number of vowels: 3
+

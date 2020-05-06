@@ -47,7 +47,7 @@ bool Compare(movie* first, movie* second);
             }
         }
 
-   void Out_Cartoon(container& c, ofstream& ofst) {
+   void Out_Only_Cartoon(container& c, ofstream& ofst) {
        ofst << "Only cartoons." << endl;
        for (int i = 0; i < c.len; i++) {
            ofst << i << ": ";

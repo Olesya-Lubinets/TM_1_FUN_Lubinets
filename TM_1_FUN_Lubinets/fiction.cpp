@@ -13,6 +13,6 @@ fiction* In_fiction(ifstream& ifst)
 
 void Out_fiction(fiction* t, ofstream& ofst)
 {
-    ofst << "It is a fiction movie " << endl;
+    ofst << "It is a fiction movie" << endl;
     ofst << "Director:  " << *(t->director) << endl;
 }

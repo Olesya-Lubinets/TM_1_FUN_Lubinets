@@ -1,48 +1,56 @@
 Filled container. 
 
 Container contains 6 elements.
-0: It is a fiction movie 
+0: It is a fiction movie
 Director:  Петров
-Title = Title#aee
+Title: Title#aee
+Country: CAN
 Number of vowels: 5
 
-1: It is a documentary movie 
+1: It is a documentary movie
 Year:  2020
-Title = Title#ae
+Title: Title#ae
+Country: UK
 Number of vowels: 4
 
-2: It is a cartoon 
+2: It is a cartoon
 It's a drawn cartoon
-Title = Title#aweqrt
+Title: Title#aweqrt
+Country: FRA
 Number of vowels: 4
 
-3: It is a documentary movie 
+3: It is a documentary movie
 Year:  2005
-Title = Title#aetw
+Title: Title#aetw
+Country: ITA
 Number of vowels: 4
 
-4: It is a fiction movie 
+4: It is a fiction movie
 Director:  Иванов
-Title = Title#ab
+Title: Title#ab
+Country: RUS
 Number of vowels: 3
 
-5: It is a cartoon 
+5: It is a cartoon
 It's a puppet cartoon
-Title = Title#a
+Title: Title#a
+Country: USA
 Number of vowels: 3
 
 Only cartoons.
 0: 
 1: 
-2: It is a cartoon 
+2: It is a cartoon
 It's a drawn cartoon
-Title = Title#aweqrt
+Title: Title#aweqrt
+Country: FRA
 Number of vowels: 4
 3: 
 4: 
-5: It is a cartoon 
+5: It is a cartoon
 It's a puppet cartoon
-Title = Title#a
+Title: Title#a
+Country: USA
 Number of vowels: 3
 Empty container. 
 
