@@ -18,7 +18,6 @@ cartoon* In_cartoon( ifstream& ifst)
        }
        
        int cartoon_type = std::stoi(temp);
-       ifst >> cartoon_type;
        switch (cartoon_type)
        {
        case 1:
