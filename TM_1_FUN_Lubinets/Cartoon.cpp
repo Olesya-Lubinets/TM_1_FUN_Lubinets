@@ -1,12 +1,23 @@
 
 #include "cartoon.h"
 #include "string.h"
+#include <string>
 
 cartoon* In_cartoon( ifstream& ifst)
 {
        cartoon* r=new cartoon;  
-
-       int cartoon_type = 0;
+       string temp;
+       ifst >> temp;
+       if (temp.length() != 1)
+       {
+           return NULL;
+       }
+       if(isdigit(temp[0])==0)
+       {
+           return NULL;
+       }
+       
+       int cartoon_type = std::stoi(temp);
        ifst >> cartoon_type;
        switch (cartoon_type)
        {
@@ -20,8 +31,7 @@ cartoon* In_cartoon( ifstream& ifst)
            r->way = cartoon::PLASTICINE;
            break;
        default:
-           cout << "Incorrect way to create of cartoon";
-           exit(1);
+           return NULL;
        }
 
        return r;
@@ -31,17 +41,20 @@ cartoon* In_cartoon( ifstream& ifst)
     void Out_cartoon(cartoon *r, ofstream& ofst)
     {
         ofst << "It is a cartoon" << endl;
-     
-        switch (r->way)
-        {
-        case 1:
-            ofst << "It's a drawn cartoon" << endl;
-            break;
-        case 2:
-            ofst << "It's a puppet cartoon" << endl;
-            break;
-        case 3:
-            ofst << "It's a plasticine cartoon" << endl;
-            break;
-        }
+      if(r==NULL)
+          ofst << "Incorrect data" << endl;
+      else {
+          switch (r->way)
+          {
+          case 1:
+              ofst << "It's a drawn cartoon" << endl;
+              break;
+          case 2:
+              ofst << "It's a puppet cartoon" << endl;
+              break;
+          case 3:
+              ofst << "It's a plasticine cartoon" << endl;
+              break;
+          }
+      }
     }

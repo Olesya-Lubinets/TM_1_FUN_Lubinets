@@ -20,13 +20,20 @@ int main(int argc, char* argv[]) {
         exit(1);
     }
     ifstream ifst(argv[1]);
+    if (!ifst.is_open())
+    {
+        cout << "No input file found or could not open!" << endl;
+        system("pause");
+        return 1;
+    }
     ofstream ofst(argv[2]);
+   
     cout << "Start" << endl;
     container c;
     Init(c);
     In(c, ifst);
     Sort(c);
-    ofst << "Filled container. " << endl<<endl;
+   ofst << "Filled container. " << endl<<endl;
    Out(c, ofst);
     
     Out_Only_Cartoon(c, ofst);

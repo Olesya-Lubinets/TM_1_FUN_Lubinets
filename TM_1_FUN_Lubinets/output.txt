@@ -1,57 +1,34 @@
 Filled container. 
 
-Container contains 6 elements.
-0: It is a fiction movie
-Director:  Петров
-Title: Title#aee
-Country: CAN
-Number of vowels: 5
+Container contains 5 elements.
+0: Incorrect data
 
-1: It is a documentary movie
-Year:  2020
+1: It is a cartoon
+It's a puppet cartoon
 Title: Title#ae
-Country: UK
+Country: USA
 Number of vowels: 4
 
-2: It is a cartoon
-It's a drawn cartoon
-Title: Title#aweqrt
-Country: FRA
-Number of vowels: 4
+2: Incorrect data
 
 3: It is a documentary movie
-Year:  2005
-Title: Title#aetw
-Country: ITA
-Number of vowels: 4
-
-4: It is a fiction movie
-Director:  Иванов
-Title: Title#ab
-Country: RUS
-Number of vowels: 3
-
-5: It is a cartoon
-It's a puppet cartoon
+Year:  1234
 Title: Title#a
 Country: USA
 Number of vowels: 3
+
+4: Incorrect data
 
 Only cartoons.
 0: 
-1: 
-2: It is a cartoon
-It's a drawn cartoon
-Title: Title#aweqrt
-Country: FRA
+1: It is a cartoon
+It's a puppet cartoon
+Title: Title#ae
+Country: USA
 Number of vowels: 4
+2: 
 3: 
 4: 
-5: It is a cartoon
-It's a puppet cartoon
-Title: Title#a
-Country: USA
-Number of vowels: 3
 Empty container. 
 
 Container contains 0 elements.

@@ -22,15 +22,16 @@ bool Compare(movie* first, movie* second);
     ifst >> k;
     if (k > max_len)
     {
-        exit(1);
+        cout << "100 records will be processed";
+        k = 100;
     }
     else
     {
         for (int i = 0; i < k; i++) {
-
-            c.cont[c.len] = In_movie(ifst);
-            c.len++;
-
+            movie* temp;
+            temp = In_movie(ifst);                    
+            c.cont[c.len] = temp;
+             c.len++;      
         }
     }
     }
@@ -42,6 +43,7 @@ bool Compare(movie* first, movie* second);
             {
                 ofst << i << ": ";
                 Out_movie(*(c.cont[i]), ofst);
+                if ((c.cont[i])!=NULL)
                 ofst << "Number of vowels: " << Count(*(c.cont[i]))<<endl;
                 ofst << endl;
             }
@@ -51,7 +53,7 @@ bool Compare(movie* first, movie* second);
        ofst << "Only cartoons." << endl;
        for (int i = 0; i < c.len; i++) {
            ofst << i << ": ";
-           if (c.cont[i]->k == movie::CARTOON) {
+           if (((c.cont[i])!= NULL) && (c.cont[i]->k == movie::CARTOON)) {
                Out_movie(*(c.cont[i]), ofst);
                ofst << "Number of vowels: " << Count(*(c.cont[i])) << endl;
            }
@@ -63,7 +65,7 @@ bool Compare(movie* first, movie* second);
 
    void Sort(container& c) {
        for (int i = 0; i < c.len - 1; i++) {
-           for (int j = i + 1; j < c.len; j++) {
+           for (int j = i + 1; j < c.len; j++) {              
                if (Compare(c.cont[i], c.cont[j])) {
                    movie* tmp = c.cont[i];
                    c.cont[i] = c.cont[j];
