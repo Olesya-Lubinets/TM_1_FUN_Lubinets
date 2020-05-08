@@ -1,21 +1,18 @@
-#pragma once
-
+#ifndef CONTAINER_H
+#define CONTAINER_H
 
 #include <iostream>
 #include <fstream>
-
+#include "string.h"
+#include <string>
 #include "movie.h"
-
 using namespace std;
 
-struct movie;
+struct Movie;
 
-struct container
-{
-    
+struct Container{
     int len; // текущая длина
-    movie* cont[100];
+    Movie* cont[100];
 };
 
-void In(container& c, ifstream& ifst);
-void Out(container& c, ofstream& ofst);
+#endif

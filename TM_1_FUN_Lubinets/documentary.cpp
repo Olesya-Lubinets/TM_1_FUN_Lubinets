@@ -1,36 +1,24 @@
 #include "documentary.h"
-#include "string.h"
-#include <iostream>
-#include <fstream>
-#include <string>
 
-using namespace std;
-
-
-documentary* In_documentary(ifstream& ifst)
-{
-    documentary* t = new documentary;
-    string temp;
-    ifst >> temp;
-    if (temp.length() != 4) { return NULL; }
-    for (int i = 0; i < 4; i++)
-    {
-        if (!isdigit(temp[i]))
-            return NULL;
-    }
-    int year_film;
-    year_film=stoi(temp);
-    t->year_release = year_film;
-    return t;
+Documentary* InDocumentary(ifstream& ifst) {
+  string temp;
+  ifst >> temp;
+  if (temp.length() != 4) return nullptr;
+  for (int i = 0; i < 4; i++) {
+    if (!isdigit((unsigned char)temp[i])) return nullptr;
+  }
+  int year_film = stoi(temp); 
+  Documentary* documentary_in = new Documentary;
+  documentary_in->year_release = year_film;
+  return documentary_in;
 }
 
 
-void Out_documentary(documentary* t, ofstream& ofst)
-{
-    ofst << "It is a documentary movie" << endl;
-    if (t == NULL)
-        ofst << "Incorrect data" << endl;
-    else {
-        ofst << "Year:  " << t->year_release << endl;
-    }
+void OutDocumentary(Documentary* documentary_out, ofstream& ofst) {
+  ofst << "It is a documentary movie" << endl;
+  if (documentary_out == nullptr) {
+    ofst << "Incorrect data" << endl;
+  } else {
+    ofst << "Year:  " << documentary_out->year_release << endl;
+  }
 }

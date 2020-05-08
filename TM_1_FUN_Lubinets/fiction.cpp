@@ -1,32 +1,21 @@
-
 #include "fiction.h"
-#include <string>
 
-fiction* In_fiction(ifstream& ifst)
-{
-    fiction* t = new fiction;
-    string* temp =new string;
-    ifst.ignore();
-    getline(ifst, *temp, '\n');
-    if ((*temp) == "\0")
-    {
-        return NULL;
-    }
-    if (isdigit((*temp).front()) != 0)
-    {
-        return NULL;
-    }
-    t->director = temp;
-    return t;
+Fiction* InFiction(ifstream& ifst) {
+  string* temp = new string;
+  ifst.ignore();
+  getline(ifst, *temp, '\n');
+  if ((*temp) == "\0") return nullptr;
+  if (isdigit((unsigned char)(*temp).front()) != 0) return nullptr;
+  Fiction* fiction_in = new Fiction;
+  fiction_in->director = temp;
+  return fiction_in;
 }
 
-
-void Out_fiction(fiction* t, ofstream& ofst)
-{
-    ofst << "It is a fiction movie" << endl;
-    if (t == NULL)
-        ofst << "Incorrect data" << endl;
-    else {
-        ofst << "Director:  " << *(t->director) << endl;
-    }
+void OutFiction(Fiction* fiction_out, ofstream& ofst) {
+  ofst << "It is a fiction movie" << endl;
+  if (fiction_out == nullptr) {
+    ofst << "Incorrect data" << endl;
+  } else {
+    ofst << "Director:  " << *(fiction_out->director) << endl;
+  }
 }

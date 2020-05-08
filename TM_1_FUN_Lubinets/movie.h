@@ -1,26 +1,29 @@
-#pragma once
+#ifndef MOVIE_H
+#define MOVIE_H
+
 #include <iostream>
 #include <fstream>
-
-using namespace std;
-
+#include "string.h"
+#include <string>
 #include "cartoon.h"
 #include "fiction.h"
 #include "documentary.h"
+using namespace std;
 
-   
-struct movie {
+struct Movie {
     string title;
     string country;
-    movie() { };
-    ~movie() {};
+    Movie() { };
+    ~Movie() {};
     enum key { FICTION=1, CARTOON, DOCUMENTARY } k;
     union { 
-        cartoon cartoon;
-        fiction fiction;
-        documentary documentary;
+        Cartoon cartoon;
+        Fiction fiction;
+        Documentary documentary;
     };
 };
+
+#endif
 
 
   

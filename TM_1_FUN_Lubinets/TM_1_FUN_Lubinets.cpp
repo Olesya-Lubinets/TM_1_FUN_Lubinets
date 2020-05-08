@@ -1,17 +1,14 @@
 ﻿#include <iostream>
 #include <fstream>
-
 #include "container.h"
-
 using namespace std;
-void Init(container& c);
-void Clear(container& c);
-void In(container& c, ifstream& ifst);
-void Out(container& c, ofstream& ofst);
-void Sort(container& c);
-void Out_Only_Cartoon(container& c, ofstream& ofst);
 
-
+void Init(Container& c);
+void Clear(Container& c);
+void In(Container& c, ifstream& ifst);
+void Out(Container& c, ofstream& ofst);
+void Sort(Container& c);
+void OutOnlyCartoon(Container& c, ofstream& ofst);
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
@@ -20,8 +17,7 @@ int main(int argc, char* argv[]) {
         exit(1);
     }
     ifstream ifst(argv[1]);
-    if (!ifst.is_open())
-    {
+    if (!ifst.is_open()){
         cout << "No input file found or could not open!" << endl;
         system("pause");
         return 1;
@@ -29,15 +25,14 @@ int main(int argc, char* argv[]) {
     ofstream ofst(argv[2]);
    
     cout << "Start" << endl;
-    container c;
+    Container c;
     Init(c);
     In(c, ifst);
     Sort(c);
-   ofst << "Filled container. " << endl<<endl;
-   Out(c, ofst);
-    
-    Out_Only_Cartoon(c, ofst);
-   Clear(c);
+    ofst << "Filled container. " << endl<<endl;
+    Out(c, ofst);
+    OutOnlyCartoon(c, ofst);
+    Clear(c);
     ofst << "Empty container. " << endl<<endl;
     Out(c, ofst);
     cout << "Stop" << endl;
