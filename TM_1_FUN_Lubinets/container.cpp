@@ -43,3 +43,41 @@ void Out_movie(movie& obj, ofstream& fout);
                 ofst << endl;
             }
         }
+
+   void MultiMethod(container &c, ofstream &ofst) {
+          ofst << "Multimethod." << endl<<endl;
+           for (int i = 0; i < c.len - 1; i++) {
+            for (int j = i + 1; j < c.len; j++) {
+              switch (c.cont[i]->k) {
+                case movie::FICTION:
+                  switch (c.cont[j]->k) {
+                    case movie::FICTION:
+                      ofst << endl << "FICTION and FICTION." << endl;
+                      break;
+                    case movie::CARTOON:
+                      ofst << endl << "FICTION and CARTOON." << endl;
+                      break;
+                    default:
+                      ofst << "Unknown type" << endl;
+                  }
+                  break;
+                case movie::CARTOON:
+                  switch (c.cont[j]->k) {
+                    case movie::FICTION:
+                      ofst << endl << "CARTOON and FICTION." << endl;
+                      break;
+                    case movie::CARTOON:
+                      ofst << endl << "CARTOON and CARTOON." << endl;
+                      break;
+                    default:
+                      ofst << "Unknown type" << endl;
+                  }
+                  break;
+                default:
+                  ofst << "Unknown type" << endl;
+              }
+              Out_movie(*(c.cont[i]), ofst);
+              Out_movie(*(c.cont[j]), ofst);
+            }
+          }
+        }

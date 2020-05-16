@@ -19,3 +19,4 @@ struct container
 
 void In(container& c, ifstream& ifst);
 void Out(container& c, ofstream& ofst);
+void MultiMethod(container& c, ofstream& ofst);

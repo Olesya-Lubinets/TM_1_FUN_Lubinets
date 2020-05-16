@@ -1,6 +1,6 @@
 Filled container. 
 
-Container contains 4 elements.
+Container contains 3 elements.
 0: It is a cartoon 
 It's a puppet cartoon
 Title = title1
@@ -13,10 +13,32 @@ Title = title2
 Director:  Иванов
 Title = title3
 
-3: It is a fiction movie 
-Director:  Петров
-Title = title4
+Multimethod.
 
+
+CARTOON and CARTOON.
+It is a cartoon 
+It's a puppet cartoon
+Title = title1
+It is a cartoon 
+It's a drawn cartoon
+Title = title2
+
+CARTOON and FICTION.
+It is a cartoon 
+It's a puppet cartoon
+Title = title1
+It is a fiction movie 
+Director:  Иванов
+Title = title3
+
+CARTOON and FICTION.
+It is a cartoon 
+It's a drawn cartoon
+Title = title2
+It is a fiction movie 
+Director:  Иванов
+Title = title3
 Empty container. 
 
 Container contains 0 elements.
