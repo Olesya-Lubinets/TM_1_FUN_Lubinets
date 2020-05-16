@@ -9,6 +9,7 @@ void In(Container& c, ifstream& ifst);
 void Out(Container& c, ofstream& ofst);
 void Sort(Container& c);
 void OutOnlyCartoon(Container& c, ofstream& ofst);
+void MultiMethod(Container& c, ofstream& ofst);
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
@@ -32,6 +33,7 @@ int main(int argc, char* argv[]) {
     ofst << "Filled container. " << endl<<endl;
     Out(c, ofst);
     OutOnlyCartoon(c, ofst);
+    MultiMethod(c, ofst);
     Clear(c);
     ofst << "Empty container. " << endl<<endl;
     Out(c, ofst);

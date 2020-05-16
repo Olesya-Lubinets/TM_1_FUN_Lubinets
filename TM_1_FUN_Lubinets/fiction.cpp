@@ -2,7 +2,6 @@
 
 Fiction* InFiction(ifstream& ifst) {
   string* temp = new string;
-  ifst.ignore();
   getline(ifst, *temp, '\n');
   if ((*temp) == "\0") return nullptr;
   if (isdigit((unsigned char)(*temp).front()) != 0) return nullptr;
