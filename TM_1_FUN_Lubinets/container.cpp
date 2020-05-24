@@ -67,7 +67,9 @@ void Sort(Container& c) {
 void MultiMethod(Container& c, ofstream& ofst) {
   ofst << endl << "Multimethod." <<  endl;
   for (int i = 0; i < c.len - 1; i++) {
+	if ((c.cont[i]) == nullptr) continue;
     for (int j = i + 1; j < c.len; j++) {
+	  if ((c.cont[j]) == nullptr) continue;
       switch (c.cont[i]->k) {
         case Movie::FICTION:
           switch (c.cont[j]->k) {
