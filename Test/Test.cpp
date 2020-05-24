@@ -23,40 +23,40 @@ namespace Test
 	TEST_CLASS(Test)
 	{
 	public:
-		//класс cartoon
-		TEST_METHOD(cartoon_input_test1)
+		//класс Cartoon
+		TEST_METHOD(Cartoon_input_test1)
 		{
 			ifstream fin(project_str + "in_cartoon_1.txt");
-			cartoon* actual=new cartoon;
-			actual=In_cartoon(fin);
-			cartoon* expected=new cartoon;
-			expected->way = cartoon::DRAWN;
+			Cartoon* actual=new Cartoon;
+			actual=InCartoon(fin);
+			Cartoon* expected=new Cartoon;
+			expected->way = Cartoon::DRAWN;
 			Assert::AreEqual(int(expected->way), int(actual->way));
 		}
-		TEST_METHOD(cartoon_input_test2)
+		TEST_METHOD(Cartoon_input_test2)
 		{
 			ifstream in(project_str + "in_cartoon_2.txt");
-			cartoon* actual=new cartoon;
-			actual = In_cartoon(in);
-			cartoon* expected = new cartoon;
-			expected->way = cartoon::PUPPET;
+			Cartoon* actual=new Cartoon;
+			actual = InCartoon(in);
+			Cartoon* expected = new Cartoon;
+			expected->way = Cartoon::PUPPET;
 			Assert::AreEqual(int(expected->way), int(actual->way));
 		}
-		TEST_METHOD(cartoon_input_test3)
+		TEST_METHOD(Cartoon_input_test3)
 		{
 			ifstream fin(project_str + "in_cartoon_3.txt");
-			cartoon* actual= new cartoon;
-			actual = In_cartoon(fin);
-			cartoon* expected = new cartoon;
-			expected->way = cartoon::PLASTICINE;
+			Cartoon* actual= new Cartoon;
+			actual = InCartoon(fin);
+			Cartoon* expected = new Cartoon;
+			expected->way = Cartoon::PLASTICINE;
 			Assert::AreEqual(int(expected->way), int(actual->way));
 		}
-		TEST_METHOD(cartoon_output_test)
+		TEST_METHOD(Cartoon_output_test)
 		{
 			ofstream fout(project_str + "out_cartoon.txt");
-			cartoon* car=new cartoon;
-			car->way = cartoon::PUPPET;
-			Out_cartoon(car, fout);
+			Cartoon* car=new Cartoon;
+			car->way = Cartoon::PUPPET;
+			OutCartoon(car, fout);
 			fout.close();
 			ifstream fin1(project_str + "out_cartoon_expected.txt");
 			ifstream fin2(project_str + "out_cartoon.txt");
@@ -66,26 +66,26 @@ namespace Test
 			getline(fin2, actual, '\0');
 			Assert::AreEqual(expected, actual);
 		}
-		//класс fiction
-		TEST_METHOD(fiction_input_test)
+		//класс Fiction
+		TEST_METHOD(Fiction_input_test)
 		{
 			ifstream fin(project_str + "in_fiction.txt");
-			fiction* actual=new fiction;
-			actual=In_fiction(fin);
-			fiction* expected = new fiction;
+			Fiction* actual=new Fiction;
+			actual=InFiction(fin);
+			Fiction* expected = new Fiction;
 			string* b = new string;
 			 *b="Ivanov";
 			expected->director = b;
 			Assert::AreEqual(*(expected->director), *(actual->director));
 		}		
-		TEST_METHOD(fiction_output_test)
+		TEST_METHOD(Fiction_output_test)
 		{
 			ofstream out(project_str + "out_fiction.txt");
-			fiction* fic = new fiction;
+			Fiction* fic = new Fiction;
 			string* b = new string;
 			*b = "Ivanov";
 			fic->director = b;
-			Out_fiction(fic, out);
+			OutFiction(fic, out);
 			out.close();
 			ifstream fin1(project_str + "out_fiction_expected.txt");
 			ifstream fin2(project_str + "out_fiction.txt");
@@ -95,23 +95,23 @@ namespace Test
 			getline(fin2, actual, '\0');
 			Assert::AreEqual(expected, actual);
 		}
-		//класс documentary
-		TEST_METHOD(documentary_input_test)
+		//класс Documentary
+		TEST_METHOD(Documentary_input_test)
 		{
 			ifstream in(project_str + "in_documentary.txt");
-			documentary* actual=new documentary;
-			actual=In_documentary(in);
-			documentary* expected=new documentary;
+			Documentary* actual=new Documentary;
+			actual=InDocumentary(in);
+			Documentary* expected=new Documentary;
 			expected->year_release = 1976;
 			Assert::AreEqual(expected->year_release, actual->year_release);
 		}		
-		TEST_METHOD(documentary_output_test)
+		TEST_METHOD(Documentary_output_test)
 		{
 			
 				ofstream fout(project_str + "out_documentary.txt");
-				documentary* doc = new documentary;
+				Documentary* doc = new Documentary;
 				doc->year_release = 2020;
-				Out_documentary(doc, fout);
+				OutDocumentary(doc, fout);
 				fout.close();
 				ifstream fin1(project_str + "out_documentary_expected.txt");
 				ifstream fin2(project_str + "out_documentary.txt");
@@ -122,64 +122,64 @@ namespace Test
 				Assert::AreEqual(expected, actual);
 			
 		}
-		//базовый класс movie
-		TEST_METHOD(movie_input_test1)
+		//базовый класс Movie
+		TEST_METHOD(Movie_input_test1)
 		{
 			ifstream in(project_str + "in_movie_1.txt");
-			movie* actual = new movie;
-			actual = In_movie(in);
-			movie* expected = new movie;
+			Movie* actual = new Movie;
+			actual = InMovie(in);
+			Movie* expected = new Movie;
 			string t = "Russia";
 			expected->country = t;
 			string t1 = "Title";
 			expected->title = t1;
-			expected->k = movie::FICTION;
+			expected->k = Movie::FICTION;
 			Assert::AreEqual(int(expected->k), int(actual->k));
 			Assert::AreEqual(expected->title, actual->title);
 			Assert::AreEqual(expected->country, actual->country);
 		}
-		TEST_METHOD(movie_input_test2)
+		TEST_METHOD(Movie_input_test2)
 		{
 			ifstream in(project_str + "in_movie_2.txt");
-			movie* actual = new movie;
-			actual = In_movie(in);
-			movie* expected = new movie;
+			Movie* actual = new Movie;
+			actual = InMovie(in);
+			Movie* expected = new Movie;
 			string t = "Russia";
 			expected->country = t;
 			string t1 = "Title";
 			expected->title = t1;
-			expected->k = movie::CARTOON;
+			expected->k = Movie::CARTOON;
 			Assert::AreEqual(int(expected->k), int(actual->k));
 			Assert::AreEqual(expected->title, actual->title);
 			Assert::AreEqual(expected->country, actual->country);
 		}
-		TEST_METHOD(movie_input_test3)
+		TEST_METHOD(Movie_input_test3)
 		{
 			ifstream in(project_str + "in_movie_3.txt");
-			movie* actual = new movie;
-			actual = In_movie(in);
-			movie* expected = new movie;
+			Movie* actual = new Movie;
+			actual = InMovie(in);
+			Movie* expected = new Movie;
 			string t = "Russia";
 			expected->country = t;
 			string t1 = "Title";
 			expected->title = t1;
-			expected->k = movie::DOCUMENTARY;
+			expected->k = Movie::DOCUMENTARY;
 			Assert::AreEqual(int(expected->k), int(actual->k));
 			Assert::AreEqual(expected->title, actual->title);
 			Assert::AreEqual(expected->country, actual->country);
 		}
 		
-		TEST_METHOD(movie_output_test)
+		TEST_METHOD(Movie_output_test)
 		{
 			ofstream fout(project_str + "out_movie.txt");
-			movie* mov = new movie;
+			Movie* mov = new Movie;
 			string t = "Title";
 			mov->title = t;
 			t = "Russia";
 			mov->country = t;
-			mov->k = movie::DOCUMENTARY;
+			mov->k = Movie::DOCUMENTARY;
 			mov->documentary.year_release = 2020;
-			Out_movie(*mov, fout);
+			OutMovie(*mov, fout);
 			fout.close();
 			ifstream fin1(project_str + "out_movie_expected.txt");
 			ifstream fin2(project_str + "out_movie.txt");
@@ -191,9 +191,9 @@ namespace Test
 		}
 		
 		
-		TEST_METHOD(movie_count_test)
+		TEST_METHOD(Movie_count_test)
 		{
-			movie* mov = new movie;
+			Movie* mov = new Movie;
 			string t = "Название";
 			mov->title = t;
 			int actual= Count(*mov);
@@ -201,12 +201,12 @@ namespace Test
 			Assert::AreEqual(expected, actual);
 		}
 		
-		TEST_METHOD(movie_compare_test)
+		TEST_METHOD(Movie_compare_test)
 		{
-			movie* mov1 = new movie;
+			Movie* mov1 = new Movie;
 			string t = "Название";
 			mov1->title = t;
-			movie* mov2 = new movie;
+			Movie* mov2 = new Movie;
 		    t = "Названиее";
 			mov2->title = t;
 			bool expected = 1;
@@ -218,7 +218,7 @@ namespace Test
 		{
 			ifstream fin(project_str + "container_in.txt");
 			ofstream fout(project_str + "container_out.txt");
-			container mas;
+			Container mas;
 			Init(mas);
 			In(mas, fin);
 			Out(mas, fout);
@@ -236,10 +236,10 @@ namespace Test
 		{
 			ifstream fin(project_str + "container_in.txt");
 			ofstream fout(project_str + "container_out_filter.txt");
-			container mas;
+			Container mas;
 			Init(mas);
 			In(mas, fin);
-			Out_Only_Cartoon(mas, fout);
+			OutOnlyCartoon(mas, fout);
 			fout.close();
 			ifstream fin1(project_str + "container_out_filer_expected.txt");
 			ifstream fin2(project_str + "container_out_filter.txt");
@@ -253,7 +253,7 @@ namespace Test
 		{
 			ifstream fin(project_str + "container_in.txt");
 			ofstream fout(project_str + "container_out_sort.txt");
-			container mas;
+			Container mas;
 			Init(mas);
 			In(mas, fin);
 			Sort(mas);
